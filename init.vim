@@ -1,3 +1,4 @@
+  
 :set number
 :set relativenumber
 :set autoindent
@@ -6,8 +7,6 @@
 :set smarttab
 :set softtabstop=4
 :set mouse=a
-
-colorscheme aura-dark
 
 call plug#begin()
 
@@ -29,6 +28,9 @@ set encoding=UTF-8
 
 call plug#end()
 
+
+:colorscheme aura-dark
+
 :set completeopt-=preview " For No Previews
 
 nnoremap <C-w> :NERDTreeToggle<CR>
@@ -37,6 +39,7 @@ nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
 nmap <C-k> :TagbarToggle<CR>
 
 inoremap <silent><expr> <C-q> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
 
 " air-line
 let g:airline_powerline_fonts = 1
@@ -53,8 +56,6 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
-
-inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
 
 " --- Just Some Notes ---
 " :PlugClean :PlugInstall :UpdateRemotePlugins
