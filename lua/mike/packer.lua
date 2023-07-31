@@ -16,12 +16,32 @@ return require('packer').startup(function(use)
 		"catppuccin/nvim",  
 		as = "catppuccin",
 		config = function()
-			vim.cmd('colorscheme catppuccin-mocha')
+			-- vim.cmd('colorscheme catppuccin')
 		end
 	})
-
+	use {
+		'daltonmenezes/aura-theme',
+		rtp = 'packages/neovim',
+		config = function()
+			vim.cmd('colorscheme aura-dark-soft-text')
+		end
+	}
+	use {
+		'glepnir/dashboard-nvim',
+		event = 'VimEnter',
+		config = function()
+			require('dashboard').setup {
+				theme = 'hyper'	
+			}
+		end,
+		requires = {'nvim-tree/nvim-web-devicons'}
+	}
 	use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use ('ThePrimeagen/harpoon')
+	use ('neoclide/coc.nvim')
 	use ('mbbill/undotree')
 	use ('tpope/vim-fugitive')
+	use ('lambdalisue/suda.vim')
+	use ('tpope/vim-commentary')
+	
 end)
