@@ -43,5 +43,8 @@ return require('packer').startup(function(use)
 	use ('tpope/vim-fugitive')
 	use ('lambdalisue/suda.vim')
 	use ('tpope/vim-commentary')
+	use ('vim-airline/vim-airline')
+	use ('vim-airline/vim-airline-themes')
+
 	
 end)
