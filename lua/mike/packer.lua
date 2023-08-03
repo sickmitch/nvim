@@ -7,36 +7,6 @@ return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 
-	use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-	use ('neoclide/coc.nvim')
-	use ('mbbill/undotree')
-	use ('tpope/vim-fugitive')
-	use ('lambdalisue/suda.vim')
-	use ('tpope/vim-commentary')
-	use ('vim-airline/vim-airline')
-	use ('vim-airline/vim-airline-themes')
-	use ('tpope/vim-surround')
-	use {
-		'crispgm/nvim-tabline',
-		dependencies = { 'nvim-tree/nvim-web-devicons' }, -- optional
-		config = true,
-	}
-	-- use {
-	-- 	'goolord/alpha-nvim',
-	-- 	requires = { 'nvim-tree/nvim-web-devicons' },
-	-- 	config = function ()
-	-- 		require'alpha'.setup(require'alpha.themes.startify'.config)
-	-- 	end
-	-- }
-	use { 
-		'lukas-reineke/indent-blankline.nvim',
-		config = function()
-			require("indent_blankline").setup {
-				show_current_context = true,
-				show_current_context_start = true,
-			}
-		end
-	}
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.2',
 		requires = { {'nvim-lua/plenary.nvim'} }
@@ -52,12 +22,33 @@ return require('packer').startup(function(use)
 			vim.cmd('colorscheme catppuccin')
 		end
 	})
+	use ('neoclide/coc.nvim')
+	use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+	use ('mbbill/undotree')
+	use ('tpope/vim-fugitive')
+	use ('lambdalisue/suda.vim')
+	use ('tpope/vim-commentary')
+	use ('vim-airline/vim-airline')
+	use ('vim-airline/vim-airline-themes')
+	use ('tpope/vim-surround')
 	use {
-		'daltonmenezes/aura-theme',
-		rtp = 'packages/neovim',
+		'crispgm/nvim-tabline',
+		config = true,
+	}
+	use {
+		'goolord/alpha-nvim',
+		requires = { 'nvim-tree/nvim-web-devicons' },
+		config = function ()
+			require'alpha'.setup(require'alpha.themes.startify'.config)
+		end
+	}
+	use { 
+		'lukas-reineke/indent-blankline.nvim',
 		config = function()
-			-- vim.cmd('colorscheme aura-dark-soft-text')
-
+			require("indent_blankline").setup {
+				show_current_context = true,
+				show_current_context_start = true,
+			}
 		end
 	}
 	use {
@@ -87,4 +78,5 @@ return require('packer').startup(function(use)
 		        }
 		end
 	}
+
 end)
