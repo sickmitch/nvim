@@ -21,13 +21,13 @@ return require('packer').startup(function(use)
 		dependencies = { 'nvim-tree/nvim-web-devicons' }, -- optional
 		config = true,
 	}
-	use {
-		'goolord/alpha-nvim',
-		requires = { 'nvim-tree/nvim-web-devicons' },
-		config = function ()
-			require'alpha'.setup(require'alpha.themes.startify'.config)
-		end
-	}
+	-- use {
+	-- 	'goolord/alpha-nvim',
+	-- 	requires = { 'nvim-tree/nvim-web-devicons' },
+	-- 	config = function ()
+	-- 		require'alpha'.setup(require'alpha.themes.startify'.config)
+	-- 	end
+	-- }
 	use { 
 		'lukas-reineke/indent-blankline.nvim',
 		config = function()
@@ -57,6 +57,7 @@ return require('packer').startup(function(use)
 		rtp = 'packages/neovim',
 		config = function()
 			-- vim.cmd('colorscheme aura-dark-soft-text')
+
 		end
 	}
 	use {
