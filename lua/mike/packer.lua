@@ -22,6 +22,17 @@ return require('packer').startup(function(use)
 			vim.cmd('colorscheme catppuccin')
 		end
 	})
+	-- use({
+	-- 	'rebelot/terminal.nvim',
+	-- 	config = function()
+	-- 		require("terminal").setup()
+	-- 	end
+	-- })
+	use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+		require("toggleterm").setup()
+	end}
+	use ('epwalsh/obsidian.nvim')
+	use ('BurntSushi/ripgrep')
 	use ('neoclide/coc.nvim')
 	use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use ('mbbill/undotree')
@@ -31,6 +42,21 @@ return require('packer').startup(function(use)
 	use ('vim-airline/vim-airline')
 	use ('vim-airline/vim-airline-themes')
 	use ('tpope/vim-surround')
+	use {'akinsho/org-bullets.nvim', config = function()
+		require('org-bullets').setup{
+			symbols = {
+				-- list symbol
+				list = "•",
+				-- headlines can be a list
+				headlines = { "◉", "○", "✸", "✿" },
+				checkboxes = {
+					half = { "", "OrgTSCheckboxHalfChecked" },
+					done = { "✓", "OrgDone" },
+					todo = { "˟", "OrgTODO" },
+				},
+			}
+		}
+	end}
 	use {
 		'crispgm/nvim-tabline',
 		config = true,
