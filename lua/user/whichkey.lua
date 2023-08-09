@@ -82,11 +82,13 @@ local theme = require('telescope.themes').get_dropdown{previewer = false}
 local builtin = require('telescope.builtin')
 
 local mappings = {
-  ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
+  ["h"] = { "<cmd>Alpha<cr>", "Alpha" },
   -- ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
   ["w"] = { "<cmd>w!<CR>", "Save" },
   ["q"] = { "<cmd>q!<CR>", "Quit" },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
+  a = { '<cmd>lua require("harpoon.mark").add_file()<cr>', 'Harpoon Mark' },
+  e = { '<cmd>lua require("harpoon.ui").toggle_quick_menu()<cr>', 'Harpoon List' },
   p = {
     name = "Packer",
     c = { "<cmd>PackerCompile<cr>", "Compile" },
@@ -124,8 +126,6 @@ local mappings = {
 			n = { '<cmd>ObsidianNew<cr>', 'New note' },
 			l = { '<cmd>ObsidianLink<cr>', 'Link <Visual Mode>' },
 			k = { '<cmd>ObsidianNewLink<cr>', 'New Link <Visual Mode>' },
-			mode = 'v',
-			mode = 'n',
   },
   f = {
     name = "Search",
