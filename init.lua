@@ -23,3 +23,4 @@ require "user.harpoon"
 
 vim.api.nvim_set_hl(0, 'LineNr', { fg = "#D26466"})
 
+vim.cmd(':set spelllang=it,en') 
