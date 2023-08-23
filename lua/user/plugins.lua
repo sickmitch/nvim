@@ -54,6 +54,7 @@ return packer.startup(function(use)
   use { "goolord/alpha-nvim", commit = "0bb6fc0646bcd1cdb4639737a1cee8d6e08bcc31" }
   use { "L3MON4D3/LuaSnip", commit = "8f8d493e7836f2697df878ef9c128337cbf2bb84" } --snippet engine
 	use {"folke/which-key.nvim"}
+  use { "lambdalisue/suda.vim" }
 	use {"ThePrimeagen/harpoon"}
 	use {"nvim-telescope/telescope-file-browser.nvim"}
 	use {"epwalsh/obsidian.nvim"}
@@ -63,8 +64,7 @@ return packer.startup(function(use)
 	-- Colorschemes
   use { "folke/tokyonight.nvim", commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764" }
   use { "catppuccin/nvim" }
-  use { "lambdalisue/suda.vim" }
-
+  use "rebelot/kanagawa.nvim"
 	-- Cmp 
   use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" } -- The completion plugin
   use { "hrsh7th/cmp-buffer", commit = "3022dbc9166796b644a841a02de8dd1cc1d311fa" } -- buffer completions

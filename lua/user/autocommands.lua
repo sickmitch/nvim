@@ -19,6 +19,17 @@ vim.cmd [[
     autocmd FileType markdown setlocal spell
   augroup end
 
+  augroup _terminal
+    autocmd!
+    autocmd BufWinEnter,WinEnter term://* startinsert
+    autocmd BufLeave term://* stopinsert
+  augroup end
+
+  augroup _FileExplorer
+    autocmd!
+    autocmd BufWinLeave,BufLeave FileExplorer print(ciao)
+  augroup end
+
   augroup _auto_resize
     autocmd!
     autocmd VimResized * tabdo wincmd = 
@@ -29,7 +40,6 @@ vim.cmd [[
     autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
   augroup end
 ]]
-
 -- Autoformat
 -- augroup _lsp
 --   autocmd!

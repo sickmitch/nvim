@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 toggleterm.setup({
-	size = 20,
+	size = 40,
 	open_mapping = [[<c-\>]],
 	hide_numbers = true,
 	shade_filetypes = {},
@@ -13,8 +13,8 @@ toggleterm.setup({
 	start_in_insert = true,
 	insert_mappings = true,
 	persist_size = true,
-	direction = "float",
-	close_on_exit = true,
+	direction = "vertical",
+	close_on_exit = false,
 	shell = vim.o.shell,
 	float_opts = {
 		border = "curved",
