@@ -1,5 +1,5 @@
 
-#Nvim Sharpie
+# Nvim Sharpie
 
 To implement just clone the repo and run the script!
 
