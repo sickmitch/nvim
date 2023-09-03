@@ -5,7 +5,7 @@ if not status_ok then
   return
 end
 
--- Sets colors to line numbers Above, Current and Below  in this order
+-- Sets colors to line numbers Above, Current and Below in this order
 function LineNumberColors()
     vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='#fdfd96', bold=true })
     vim.api.nvim_set_hl(0, 'LineNr', { fg='white', bold=true })
@@ -16,5 +16,11 @@ function VertAdjust()
   vim.cmd(':resize +5<CR>') 
 end
 
+function ColCol()
+  vim.cmd(':set cc=80')
+  vim.cmd(':hi ColorColumn guibg=#D26466')
+end
+
+ColCol()
 LineNumberColors()
 VertAdjust()
