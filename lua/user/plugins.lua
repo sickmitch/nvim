@@ -55,7 +55,6 @@ return packer.startup(function(use)
   use { "L3MON4D3/LuaSnip", commit = "8f8d493e7836f2697df878ef9c128337cbf2bb84" } --snippet engine
 	use {"folke/which-key.nvim"}
   use { "lambdalisue/suda.vim" }
-	use {"ThePrimeagen/harpoon"}
 	use {"nvim-telescope/telescope-file-browser.nvim"}
 	use {"epwalsh/obsidian.nvim"}
 	use {"tpope/vim-surround"}
@@ -81,7 +80,7 @@ return packer.startup(function(use)
   use { "RRethy/vim-illuminate", commit = "d6ca7f77eeaf61b3e6ce9f0e5a978d606df44298" }
 
 	-- Telescope
-	use { "nvim-telescope/telescope.nvim", commit = "76ea9a898d3307244dce3573392dcf2cc38f340f" }
+	use { "nvim-telescope/telescope.nvim"}
 
 	-- Treesitter
 	use {

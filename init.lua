@@ -20,6 +20,4 @@ require "user.whichkey"
 require "user.autocommands"
 require "user.file_browser"
 require "user.blankline"
-require "user.obsidian"
-require "user.harpoon"
 

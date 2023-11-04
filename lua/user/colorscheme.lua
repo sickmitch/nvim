@@ -22,5 +22,5 @@ function ColCol()
 end
 
 ColCol()
-LineNumberColors()
+-- LineNumberColors()
 VertAdjust()
