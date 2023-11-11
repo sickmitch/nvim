@@ -21,6 +21,6 @@ function ColCol()
   vim.cmd(':hi ColorColumn guibg=#D26466')
 end
 
-ColCol()
--- LineNumberColors()
+-- ColCol()
+LineNumberColors()
 VertAdjust()
